@@ -1,0 +1,14 @@
+name: montse-tBLG
+channels:
+  - default
+  - conda-forge
+dependencies:
+  - python
+  - sphinx
+  - pip
+  - pandas
+  - matplotlib
+  - pip:
+    - quantecon
+    - jupyter-book>=0.7.0b
+    - pythtb
