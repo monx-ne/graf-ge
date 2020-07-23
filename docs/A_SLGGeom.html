@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Monocapa de grafeno &#8212; Estudio electrónico para la monocapa y bicapa de grafeno.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hamiltoniano de amarre fuerte continuo para bajas energías" href="B_BandStructureSLG.html" />
+    <link rel="prev" title="Monocapa y bicapa de grafeno." href="index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Estudio electrónico para la monocapa y bicapa de grafeno.</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Monocapa de grafeno
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Geometría
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="B_BandStructureSLG.html">
+   Hamiltoniano de amarre fuerte continuo para bajas energías
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="B_BandStructureSLG.html#relacion-de-dispersion">
+   Relación de dispersión
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="C_DOS_SLG.html">
+   Densidad de estados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bicapa de grafeno
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="D_tBLGGeom.html">
+   Geometría
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="E_BandStructuretBLG.html">
+   Hamiltoniano de amarre fuerte continuo para bajas energías
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="E_BandStructuretBLG.html#relacion-de-dispersion">
+   Relación de dispersión
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="F_DOS_tBLG.html">
+   Densidad de estados
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/A_SLGGeom.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometria-de-red">
+   Geometría de red
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#espacio-real">
+     Espacio Real
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#espacio-reciproco">
+     Espacio Recíproco
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="monocapa-de-grafeno">
+<h1>Monocapa de grafeno<a class="headerlink" href="#monocapa-de-grafeno" title="Permalink to this headline">¶</a></h1>
+<p>El grafeno es un alótropo de carbono, y consiste de una única capa de C <span class="math notranslate nohighlight">\((sp^2)\)</span> empacados en una estructura  bidimensional.</p>
+<div class="section" id="geometria-de-red">
+<h2>Geometría de red<a class="headerlink" href="#geometria-de-red" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="espacio-real">
+<h3>Espacio Real<a class="headerlink" href="#espacio-real" title="Permalink to this headline">¶</a></h3>
+<p>La monocapa de grafeno está conformada por varios carbonos arreglados en una estructura tipo panal. Se considera el sistema de coordenadas procurando que el arreglo en zig-zag esté alineado al eje x.</p>
+<p><img alt="AQUI" src="../_images/SLGreal.png" /></p>
+<p>Cada celda unitaria contiene 2 átomos de carbono pertenecientes a diferentes subredes, A y B. El arreglo de varias celdas unitarias forma una red hexagonal de Bravais <span class="math notranslate nohighlight">\(\{\textbf{R}\}\)</span>, con posiciones:</p>
+<p>\begin{equation}
+\textbf{R} = n_1 \textbf{a}_1 + n_2 \textbf{a}_2, \quad n_1, n_2 \epsilon \mathrm{\mathbb{Z}}	
+\end{equation}</p>
+<p>donde los vectores base <span class="math notranslate nohighlight">\(a_1\)</span> y <span class="math notranslate nohighlight">\(a_2\)</span> se definen como:</p>
+<p>\begin{equation}
+\textbf{a}_1 =a \left( \frac{1}{2},\frac{\sqrt3}{2}\right)
+\hspace{5mm},
+\hspace{5mm}
+\textbf{a}_2 =a \left(-\frac{1}{2},\frac{\sqrt3}{2}\right)
+\end{equation}</p>
+<p>y $a \simeq 2.46 \mathring A $ es el parámetro de red, ligado a la distancia carbono-carbono, <span class="math notranslate nohighlight">\(d\)</span>, por <span class="math notranslate nohighlight">\(a = \sqrt 3 d\)</span>.</p>
+</div>
+<div class="section" id="espacio-reciproco">
+<h3>Espacio Recíproco<a class="headerlink" href="#espacio-reciproco" title="Permalink to this headline">¶</a></h3>
+<p>Dada la red en el espacio real, podemos definir el conjunto de puntos <span class="math notranslate nohighlight">\(\{\textbf{G}\}\)</span> tales que $ e^{i {\textbf{R}} \cdot {\textbf{G}}} = 1$. Estos puntos forman la red recíproca y pueden escribirse en términos de sus vectores base, de la siguiente manera:</p>
+<p>\begin{equation}
+\textbf{G} = m_1 \textbf{b}_1 + m_2 \textbf{b}_2 \hspace{8mm} m_1, m_2  \hspace{1mm} \epsilon \hspace{1mm} \mathbb{Z}	
+\end{equation}</p>
+<p>donde los vectores <span class="math notranslate nohighlight">\(\textbf{b}_1\)</span> y <span class="math notranslate nohighlight">\(\textbf{b}_2\)</span> obedecen por definición:
+\begin{equation}
+\textbf{a}_i \cdot \textbf{b}<em>j = 2 \pi \delta</em>{i,j}
+\end{equation}</p>
+<p>Por lo tanto, en este caso <span class="math notranslate nohighlight">\(\textbf{b}_1\)</span> y <span class="math notranslate nohighlight">\(\textbf{b}_2\)</span> se espresan como:</p>
+<p>\begin{equation}
+\textbf{b}_1 = \frac{4\pi}{3d} \left(\frac{\sqrt3}{2},\frac{1}{2}\right)
+\hspace{5mm},\hspace{5mm}
+\textbf{b}_2 =\frac{4\pi}{3d} \left(\frac{-\sqrt3}{2},\frac{1}{2}\right)
+\end{equation}</p>
+<p><img alt="" src="../_images/SLGrec.png" /></p>
+<p>Ya que los estados de Bloch no se modifican por traslaciones en el espacio de momentos, toda la información del sistema puede obtenerse limitando el enfoque a la celda unitaria en el espacio recíproco (1ª zona de Brillouin). Los puntos de interés para este trabajo son aquellos de alta simetría, los cuales son:</p>
+<p>\begin{equation}
+\textbf{K}^{\pm}= \pm \frac{4\pi}{3 a} \left(1,0\right)
+\hspace{5mm},\hspace{5mm}
+\textbf{M}= \frac{\pi}{a}  \left( 1,\frac{-1}{\sqrt{3}}       \right)
+\hspace{5mm},\hspace{5mm}
+\boldsymbol{\Gamma} = \left(0,0 \right)
+\end{equation}</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Monocapa y bicapa de grafeno.</a>
+    <a class='right-next' id="next-link" href="B_BandStructureSLG.html" title="next page">Hamiltoniano de amarre fuerte continuo para bajas energías</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Montserrat Navarro Espino<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

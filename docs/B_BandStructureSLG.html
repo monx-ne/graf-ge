@@ -1,0 +1,397 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hamiltoniano de amarre fuerte continuo para bajas energías &#8212; Estudio electrónico para la monocapa y bicapa de grafeno.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Densidad de estados" href="C_DOS_SLG.html" />
+    <link rel="prev" title="Monocapa de grafeno" href="A_SLGGeom.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Estudio electrónico para la monocapa y bicapa de grafeno.</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Monocapa de grafeno
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="A_SLGGeom.html">
+   Geometría
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Hamiltoniano de amarre fuerte continuo para bajas energías
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#relacion-de-dispersion">
+   Relación de dispersión
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="C_DOS_SLG.html">
+   Densidad de estados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bicapa de grafeno
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="D_tBLGGeom.html">
+   Geometría
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="E_BandStructuretBLG.html">
+   Hamiltoniano de amarre fuerte continuo para bajas energías
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="E_BandStructuretBLG.html#relacion-de-dispersion">
+   Relación de dispersión
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="F_DOS_tBLG.html">
+   Densidad de estados
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/B_BandStructureSLG.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="hamiltoniano-de-amarre-fuerte-continuo-para-bajas-energias">
+<h1>Hamiltoniano de amarre fuerte continuo para bajas energías<a class="headerlink" href="#hamiltoniano-de-amarre-fuerte-continuo-para-bajas-energias" title="Permalink to this headline">¶</a></h1>
+<p>Para calcular la estructura de bandas en un sistema de gran tamaño, es posible utilizar la aproximación de amarre fuerte. Este método semi-empírico es de bajo costo computacional y permite la descripción de los estados electrónicos de nuestro interés.</p>
+<p>Es importante recordar que nuestro sistema consta de carbonos con hibridación <span class="math notranslate nohighlight">\(sp^2\)</span>, por lo que los orbitales atómicos tienen una simetría específica:</p>
+<p><img alt="" src="../_images/orbitalesC.png" /></p>
+<p>Ya que cada carbono tiene un electrón en el orbital <span class="math notranslate nohighlight">\(p_z\)</span>, se considerará 1 orbital por sitio. Se asume que estos electrones estan altamente <span class="math notranslate nohighlight">\(\textit{amarrados}\)</span> al core, por lo que el traslape entre un orbital atómico y el otro es pequeño, limitado a primeros vecinos.</p>
+<p>Para conocer los estados electrónicos, se debe resolver el problema de valores propios:</p>
+<p>\begin{equation}
+\mathbb{H} \psi_{n} = E \mathbb{I}  \psi_{n }
+\end{equation}</p>
+<p>\begin{equation}
+det \vert \mathbb{H} - E \mathbb{I}\vert =0
+\end{equation}</p>
+<hr class="docutils" />
+<p>Por ser un sistema periódico en el espacio, se debe describir con funciones propias que satisfagan el teorema de Bloch:</p>
+<p>\begin{equation}
+\psi_{n \textbf{k}}(\textbf{r}+\textbf{R}) = e ^{i \textbf{k}\cdot \textbf{R}}\psi_{n \textbf{k}}(\textbf{r})
+\end{equation}</p>
+<p>Al introducirlas al Hamiltoniano, este dependerá de <span class="math notranslate nohighlight">\(\textbf{k}\)</span> y adquirirá la forma:</p>
+<p>\begin{equation}
+H_{\textbf{k}} =
+\begin{pmatrix}
+0 &amp; -t \alpha(\textbf{k})
+\
+-t \alpha(\textbf{k})^* &amp; 0
+\end{pmatrix}
+\end{equation}</p>
+<p>donde:</p>
+<p>\begin{equation}
+\alpha(\textbf{k}) = 1 + e^{(-i \textbf{k} \cdot \textbf{a}_1)} + e^{(-i \textbf{k} \cdot \textbf{a}_2)}
+\end{equation}</p>
+<p>A continuación, se realiza el cálculo de los valores propios del Hamiltoniano anterior y se grafican en el espacio recíproco.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">linalg</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="relacion-de-dispersion">
+<h1>Relación de dispersión<a class="headerlink" href="#relacion-de-dispersion" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">GetkPath</span><span class="p">(</span><span class="n">kpoints</span><span class="p">,</span><span class="n">numNk</span><span class="p">):</span>
+    <span class="n">numP</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">kpoints</span><span class="p">)</span>
+    <span class="n">Dist</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numP</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">veck</span> <span class="o">=</span> <span class="n">kpoints</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">kpoints</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+        <span class="n">D</span>    <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span> <span class="n">dot</span><span class="p">(</span><span class="n">veck</span><span class="p">,</span><span class="n">veck</span><span class="p">)</span> <span class="p">)</span>
+        <span class="n">Dist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">D</span> <span class="p">)</span>
+    <span class="n">Dist</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">Dist</span><span class="p">)</span>
+    <span class="n">Nk_p</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span> <span class="p">[</span> <span class="nb">int</span><span class="p">(</span><span class="n">numNk</span><span class="o">*</span><span class="n">D</span><span class="o">/</span><span class="n">Dist</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="n">Dist</span> <span class="p">]</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">Nk_p</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">&lt;</span><span class="n">numNk</span><span class="p">):</span>
+        <span class="n">Nk_p</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">numNk</span> <span class="o">-</span> <span class="n">Nk_p</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">KX</span><span class="p">,</span> <span class="n">KY</span> <span class="o">=</span> <span class="n">array</span><span class="p">([]),</span><span class="n">array</span><span class="p">([])</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numP</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">KX</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">([</span><span class="n">KX</span><span class="p">,</span><span class="n">linspace</span><span class="p">(</span><span class="n">kpoints</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">kpoints</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">Nk_p</span><span class="p">[</span><span class="n">k</span><span class="p">])])</span> 
+        <span class="n">KY</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">([</span><span class="n">KY</span><span class="p">,</span><span class="n">linspace</span><span class="p">(</span><span class="n">kpoints</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">kpoints</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">Nk_p</span><span class="p">[</span><span class="n">k</span><span class="p">])])</span>
+    <span class="k">return</span> <span class="n">column_stack</span><span class="p">((</span><span class="n">KX</span><span class="p">,</span><span class="n">KY</span><span class="p">)),</span><span class="n">concatenate</span><span class="p">([[</span><span class="mi">0</span><span class="p">],</span><span class="n">cumsum</span><span class="p">(</span><span class="n">Nk_p</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>   <span class="o">=</span> <span class="mf">1.42</span>
+<span class="n">t</span>   <span class="o">=</span> <span class="mf">2.97</span>  
+<span class="n">b1</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="o">/</span><span class="n">d</span><span class="o">*</span><span class="n">array</span><span class="p">([</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">])</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="o">/</span><span class="n">d</span><span class="o">*</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">])</span>
+<span class="n">bvec</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="n">b1</span><span class="p">,</span><span class="n">b2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Γ</span> <span class="o">=</span> <span class="n">dot</span><span class="p">(</span> <span class="n">array</span><span class="p">([</span>  <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">]),</span> <span class="n">bvec</span> <span class="p">)</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">dot</span><span class="p">(</span> <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>  <span class="mi">0</span><span class="p">]),</span> <span class="n">bvec</span> <span class="p">)</span>
+<span class="n">K</span> <span class="o">=</span> <span class="n">dot</span><span class="p">(</span> <span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">]),</span> <span class="n">bvec</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Nkpoints</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">K</span><span class="p">,</span><span class="n">Kinfo</span> <span class="o">=</span> <span class="n">GetkPath</span><span class="p">([</span><span class="n">Γ</span><span class="p">,</span><span class="n">K</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">Γ</span><span class="p">],</span><span class="n">Nkpoints</span><span class="p">)</span>
+<span class="n">Klabel</span> <span class="o">=</span> <span class="p">[</span> <span class="sa">r</span><span class="s2">&quot;$\Gamma$&quot;</span><span class="p">,</span><span class="sa">r</span><span class="s2">&quot;${\rm K}$&quot;</span><span class="p">,</span><span class="sa">r</span><span class="s2">&quot;${\rm M}$&quot;</span><span class="p">,</span><span class="sa">r</span><span class="s2">&quot;$\Gamma$&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H0_k</span>   <span class="o">=</span> <span class="p">[]</span>
+<span class="n">eigva</span>  <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">kx</span><span class="p">,</span><span class="n">ky</span> <span class="ow">in</span> <span class="n">K</span><span class="p">:</span>
+    <span class="n">fk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="n">kx</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="n">ky</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="n">kx</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span> <span class="p">)</span>
+    <span class="n">H</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span> <span class="mi">0</span>             <span class="p">,</span>  <span class="o">-</span><span class="n">t</span><span class="o">*</span><span class="n">fk</span> <span class="p">],</span>
+                   <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="o">*</span><span class="n">fk</span><span class="p">)</span> <span class="p">,</span>   <span class="mi">0</span>    <span class="p">]])</span>
+    <span class="n">H0_k</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
+    
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">H0_k</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">eigvals</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">eigva</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">real</span><span class="p">))</span>
+    
+    
+<span class="n">eigva</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">eigva</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s1">&#39;text.usetex&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;axes.linewidth&#39;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">})</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;axes.labelsize&#39;</span><span class="p">:</span><span class="s1">&#39;large&#39;</span><span class="p">})</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;xtick.major.size&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">})</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;xtick.minor.size&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">})</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;ytick.major.size&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">})</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;ytick.minor.size&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">})</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;xtick.major.width&#39;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">})</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;xtick.minor.width&#39;</span><span class="p">:</span><span class="mf">1.0</span><span class="p">})</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;ytick.major.width&#39;</span><span class="p">:</span><span class="mf">1.5</span><span class="p">})</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;ytick.minor.width&#39;</span><span class="p">:</span><span class="mf">1.0</span><span class="p">})</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;legend.frameon&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span><span class="s1">&#39;legend.framealpha&#39;</span><span class="p">:</span><span class="mf">0.0</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span>   <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">d</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mf">5.6</span><span class="p">))</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">arange</span><span class="p">(</span><span class="n">Nkpoints</span><span class="p">),</span><span class="n">eigva</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">arange</span><span class="p">(</span><span class="n">Nkpoints</span><span class="p">),</span><span class="n">eigva</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+
+
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$E\,({\rm eV})$&#39;</span><span class="p">)</span> 
+<span class="n">axes</span><span class="o">.</span><span class="n">set_title</span> <span class="p">(</span><span class="s1">&#39;SLG Electronic spectrum&#39;</span><span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">kl</span> <span class="ow">in</span> <span class="n">Kinfo</span><span class="p">:</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">kl</span><span class="p">,</span><span class="n">kl</span><span class="p">],[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span> <span class="p">)</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">Kinfo</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">Klabel</span><span class="p">)</span>
+
+    
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;SLG.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/B_BandStructureSLG_24_0.png" src="../_images/B_BandStructureSLG_24_0.png" />
+</div>
+</div>
+<p>Aparece una banda por cada átomo en la celda unitara con cada estado ocupado por 2 electrones (degeneración de espín). Al estar en una configuración neutra, la banda de menor energía está llena (<span class="math notranslate nohighlight">\(E_\_(\textbf{k})\)</span>) y la banda superior (<span class="math notranslate nohighlight">\(E_+(\textbf{k})\)</span>) está vacía, situando al nivel de Fermi en <span class="math notranslate nohighlight">\(E=0\)</span>. Las bandas se tocan en los puntos de alta simetría <span class="math notranslate nohighlight">\(K\)</span> y <span class="math notranslate nohighlight">\(K'\)</span> (puntos de Dirac).</p>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="A_SLGGeom.html" title="previous page">Monocapa de grafeno</a>
+    <a class='right-next' id="next-link" href="C_DOS_SLG.html" title="next page">Densidad de estados</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Montserrat Navarro Espino<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
