@@ -1,0 +1,38 @@
+#######################################################################################
+# Book settings
+title : Estudio electrónico de la monocapa y bicapa de grafeno.
+author: Montserrat Navarro Espino
+logo: 'logo.png'
+
+# Information about where the book exists on the web
+description: >-
+  Notas del Hamiltoniano de amarre fuerte de grafeno.
+
+#######################################################################################
+# Execution settings
+execute:
+  execute_notebooks           : cache
+
+#######################################################################################
+# HTML-specific settings
+html:
+  home_page_in_navbar         : false
+
+# #######################################################################################
+# Interact link settings
+notebook_interface            : "notebook"
+
+#######################################################################################
+# Launch button settings
+repository:
+  url                         : https://github.com/monx-ne/NOMBREBOOK
+  path_to_book                : "montse_book"
+
+binder:
+  binderhub_url               : "https://mybinder.org"
+  text                        : "Launch binder"
+
+latex:
+  latex_engine                : "xelatex"
+  latex_documents:
+    targetname: book.tex
