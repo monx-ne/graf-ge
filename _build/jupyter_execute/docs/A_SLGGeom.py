@@ -25,19 +25,21 @@ donde los vectores base $a_1$ y $a_2$ se definen como:
 \textbf{a}_2 =a \left(-\frac{1}{2},\frac{\sqrt3}{2}\right)
 \end{equation}
 
-y $a \simeq 2.46 \mathring A $ es el parámetro de red, ligado a la distancia carbono-carbono, $d$, por $a = \sqrt 3 d$.
+y $a ≃ 2.46\, Å$  es el parámetro de red, ligado a la distancia carbono-carbono, $d$, por $a = \sqrt 3 d$.
 
 ### Espacio Recíproco
 
-Dada la red en el espacio real, podemos definir el conjunto de puntos $\{\textbf{G}\}$ tales que $ e^{i \{\textbf{R}\} \cdot \{\textbf{G}\}} = 1$. Estos puntos forman la red recíproca y pueden escribirse en términos de sus vectores base, de la siguiente manera:
+Dada la red en el espacio real, podemos definir el conjunto de puntos $\{\textbf{G}\}$ tales que $e^{i \{ \textbf{R} \} \cdot \{ \textbf{G} \} } =1$. Estos puntos forman la red recíproca y pueden escribirse en términos de sus vectores base, de la siguiente manera:
 
 \begin{equation}
 \textbf{G} = m_1 \textbf{b}_1 + m_2 \textbf{b}_2 \hspace{8mm} m_1, m_2  \hspace{1mm} \epsilon \hspace{1mm} \mathbb{Z}	
 \end{equation}
 
 donde los vectores $\textbf{b}_1$ y $\textbf{b}_2$ obedecen por definición:
+
+
 \begin{equation}
-\textbf{a}_i \cdot \textbf{b}_j = 2 \pi \delta_{i,j} 
+\textbf{a}_ {i} \cdot \textbf{b}_ {j} = 2 \pi \delta_{i,j} 
 \end{equation}
 
 Por lo tanto, en este caso $\textbf{b}_1$ y $\textbf{b}_2$ se espresan como:

@@ -36,3 +36,15 @@ latex:
   latex_engine                : "xelatex"
   latex_documents:
     targetname: book.tex
+
+sphinx:
+  config:
+    mathjax_path:
+      "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"
+    mathjax_config:
+      TeX:
+        Macros:
+          "N": "\\mathbb{N}"
+          "floor": ["\\lfloor#1\\rfloor", 1]
+          "bmat" : ["\\left[\\begin{array}"]
+          "emat" : ["\\end{array}\\right]"]

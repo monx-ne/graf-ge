@@ -232,7 +232,5 @@ ylim(0.0,0.1)
 plot([0.3,0.3],[0,0.1],"--")
 plot([-0.3,-0.3],[0,0.1],"--")
 
-axes.set_ylabel('DOS') 
-axes.set_title('E (eV)') 
-
-
+ylabel('DOS') 
+title('E (eV)') 
