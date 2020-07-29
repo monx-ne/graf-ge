@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Densidad de estados &#8212; Estudio electrónico para la monocapa y bicapa de grafeno.</title>
+    <title>Densidad de estados &#8212; Estudio electrónico de la monocapa y bicapa de grafeno.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -28,7 +28,8 @@
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="Hamiltoniano de amarre fuerte continuo para bajas energías" href="E_BandStructuretBLG.html" />
@@ -53,7 +54,7 @@
   <img src="../_static/logo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Estudio electrónico para la monocapa y bicapa de grafeno.</h1>
+  <h1 class="site-logo" id="site-title">Estudio electrónico de la monocapa y bicapa de grafeno.</h1>
   
 </a>
 </div>
@@ -64,61 +65,33 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <p class="caption">
- <span class="caption-text">
-  Monocapa de grafeno
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="A_SLGGeom.html">
-   Geometría
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="B_BandStructureSLG.html">
-   Hamiltoniano de amarre fuerte continuo para bajas energías
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="B_BandStructureSLG.html#relacion-de-dispersion">
-   Relación de dispersión
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="C_DOS_SLG.html">
-   Densidad de estados
-  </a>
- </li>
+  
+  <ul class="nav sidenav_l1">
+<li class="navbar-special">
+<p class="margin-caption">Monocapa de grafeno</p>
+</li>
+  <li class="">
+    <a href="A_SLGGeom.html">Geometría</a>
+  </li>
+  <li class="">
+    <a href="B_BandStructureSLG.html">Hamiltoniano de amarre fuerte continuo para bajas energías</a>
+  </li>
+  <li class="">
+    <a href="C_DOS_SLG.html">Densidad de estados</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Bicapa de grafeno</p>
+</li>
+  <li class="">
+    <a href="D_tBLGGeom.html">Geometría</a>
+  </li>
+  <li class="">
+    <a href="E_BandStructuretBLG.html">Hamiltoniano de amarre fuerte continuo para bajas energías</a>
+  </li>
+  <li class="active">
+    <a href="">Densidad de estados</a>
+  </li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Bicapa de grafeno
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="D_tBLGGeom.html">
-   Geometría
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="E_BandStructuretBLG.html">
-   Hamiltoniano de amarre fuerte continuo para bajas energías
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="E_BandStructuretBLG.html#relacion-de-dispersion">
-   Relación de dispersión
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Densidad de estados
-  </a>
- </li>
-</ul>
-
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -175,15 +148,15 @@
         <!-- Launch buttons -->
 
     </div>
-
-    <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
-        </div>
-        <nav id="bd-toc-nav">
-            
-        </nav>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
     </div>
 </div>
     <div id="main-content" class="row">
@@ -390,8 +363,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>CPU times: user 4.33 ms, sys: 634 µs, total: 4.97 ms
-Wall time: 6.37 ms
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>CPU times: user 3.35 ms, sys: 0 ns, total: 3.35 ms
+Wall time: 1.98 ms
 </pre></div>
 </div>
 </div>
@@ -456,127 +429,6 @@ Wall time: 6.37 ms
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="stderr docutils container">
-<pre class="stderr literal-block">Process ForkPoolWorker-3:
-Process ForkPoolWorker-2:
-Traceback (most recent call last):
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/process.py&quot;, line 297, in _bootstrap
-    self.run()
-Process ForkPoolWorker-4:
-Traceback (most recent call last):
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/process.py&quot;, line 99, in run
-    self._target(*self._args, **self._kwargs)
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/pool.py&quot;, line 121, in worker
-    result = (True, func(*args, **kwds))
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/process.py&quot;, line 297, in _bootstrap
-    self.run()
-Traceback (most recent call last):
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/process.py&quot;, line 99, in run
-    self._target(*self._args, **self._kwargs)
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/pool.py&quot;, line 44, in mapstar
-    return list(map(*args))
-  File &quot;&lt;ipython-input-9-fd8c8d96f79b&gt;&quot;, line 33, in GetHam
-    Htmp = array(kron(diag(diagonal), [Hk]))[0]
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/process.py&quot;, line 297, in _bootstrap
-    self.run()
-Process ForkPoolWorker-1:
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/process.py&quot;, line 99, in run
-    self._target(*self._args, **self._kwargs)
-  File &quot;&lt;__array_function__ internals&gt;&quot;, line 6, in kron
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/pool.py&quot;, line 121, in worker
-    result = (True, func(*args, **kwds))
-Traceback (most recent call last):
-  File &quot;/home/monxe/anaconda3/lib/python3.7/site-packages/numpy/lib/shape_base.py&quot;, line 1155, in kron
-    result = concatenate(result, axis=axis)
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/pool.py&quot;, line 121, in worker
-    result = (True, func(*args, **kwds))
-  File &quot;&lt;__array_function__ internals&gt;&quot;, line 4, in concatenate
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/process.py&quot;, line 297, in _bootstrap
-    self.run()
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/pool.py&quot;, line 44, in mapstar
-    return list(map(*args))
-  File &quot;/home/monxe/anaconda3/lib/python3.7/site-packages/numpy/core/multiarray.py&quot;, line 145, in concatenate
-    &#64;array_function_from_c_func_and_dispatcher(_multiarray_umath.concatenate)
-KeyboardInterrupt
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/pool.py&quot;, line 44, in mapstar
-    return list(map(*args))
-  File &quot;&lt;ipython-input-9-fd8c8d96f79b&gt;&quot;, line 33, in GetHam
-    Htmp = array(kron(diag(diagonal), [Hk]))[0]
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/process.py&quot;, line 99, in run
-    self._target(*self._args, **self._kwargs)
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/pool.py&quot;, line 121, in worker
-    result = (True, func(*args, **kwds))
-  File &quot;&lt;__array_function__ internals&gt;&quot;, line 6, in kron
-  File &quot;/home/monxe/anaconda3/lib/python3.7/multiprocessing/pool.py&quot;, line 44, in mapstar
-    return list(map(*args))
-  File &quot;/home/monxe/anaconda3/lib/python3.7/site-packages/numpy/lib/shape_base.py&quot;, line 1155, in kron
-    result = concatenate(result, axis=axis)
-  File &quot;&lt;ipython-input-9-fd8c8d96f79b&gt;&quot;, line 38, in GetHam
-    eigenvalue,featurevector=linalg.eig(H)
-  File &quot;&lt;__array_function__ internals&gt;&quot;, line 6, in concatenate
-KeyboardInterrupt
-  File &quot;&lt;ipython-input-9-fd8c8d96f79b&gt;&quot;, line 38, in GetHam
-    eigenvalue,featurevector=linalg.eig(H)
-  File &quot;&lt;__array_function__ internals&gt;&quot;, line 6, in eig
-  File &quot;&lt;__array_function__ internals&gt;&quot;, line 6, in eig
-  File &quot;/home/monxe/anaconda3/lib/python3.7/site-packages/numpy/linalg/linalg.py&quot;, line 1301, in eig
-    w, vt = _umath_linalg.eig(a, signature=signature, extobj=extobj)
-KeyboardInterrupt
-  File &quot;/home/monxe/anaconda3/lib/python3.7/site-packages/numpy/linalg/linalg.py&quot;, line 1301, in eig
-    w, vt = _umath_linalg.eig(a, signature=signature, extobj=extobj)
-</pre>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="n">fdb46afe80ed</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">p</span>  <span class="o">=</span> <span class="n">Pool</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">Ek</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">GetHam</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">Ek</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">Ek</span><span class="p">)</span>
-
-<span class="nn">~/anaconda3/lib/python3.7/multiprocessing/pool.py</span> in <span class="ni">map</span><span class="nt">(self, func, iterable, chunksize)</span>
-<span class="g g-Whitespace">    </span><span class="mi">266</span>         <span class="ow">in</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">returned</span><span class="o">.</span>
-<span class="g g-Whitespace">    </span><span class="mi">267</span>         <span class="s1">&#39;&#39;&#39;</span>
-<span class="ne">--&gt; </span><span class="mi">268</span><span class="s1">         return self._map_async(func, iterable, mapstar, chunksize).get()</span>
-<span class="g g-Whitespace">    </span><span class="mi">269</span><span class="s1"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">270</span><span class="s1">     def starmap(self, func, iterable, chunksize=None):</span>
-
-<span class="nn">~/anaconda3/lib/python3.7/multiprocessing/pool.py</span> in <span class="ni">get</span><span class="nt">(self, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span><span class="s1"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">650</span><span class="s1">     def get(self, timeout=None):</span>
-<span class="ne">--&gt; </span><span class="mi">651</span><span class="s1">         self.wait(timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">652</span><span class="s1">         if not self.ready():</span>
-<span class="g g-Whitespace">    </span><span class="mi">653</span><span class="s1">             raise TimeoutError</span>
-
-<span class="nn">~/anaconda3/lib/python3.7/multiprocessing/pool.py</span> in <span class="ni">wait</span><span class="nt">(self, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span><span class="s1"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">647</span><span class="s1">     def wait(self, timeout=None):</span>
-<span class="ne">--&gt; </span><span class="mi">648</span><span class="s1">         self._event.wait(timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span><span class="s1"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">650</span><span class="s1">     def get(self, timeout=None):</span>
-
-<span class="nn">~/anaconda3/lib/python3.7/threading.py</span> in <span class="ni">wait</span><span class="nt">(self, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">550</span><span class="s1">             signaled = self._flag</span>
-<span class="g g-Whitespace">    </span><span class="mi">551</span><span class="s1">             if not signaled:</span>
-<span class="ne">--&gt; </span><span class="mi">552</span><span class="s1">                 signaled = self._cond.wait(timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">553</span><span class="s1">             return signaled</span>
-<span class="g g-Whitespace">    </span><span class="mi">554</span><span class="s1"> </span>
-
-<span class="nn">~/anaconda3/lib/python3.7/threading.py</span> in <span class="ni">wait</span><span class="nt">(self, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">294</span><span class="s1">         try:    # restore state no matter what (e.g., KeyboardInterrupt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">295</span><span class="s1">             if timeout is None:</span>
-<span class="ne">--&gt; </span><span class="mi">296</span><span class="s1">                 waiter.acquire()</span>
-<span class="g g-Whitespace">    </span><span class="mi">297</span><span class="s1">                 gotit = True</span>
-<span class="g g-Whitespace">    </span><span class="mi">298</span><span class="s1">             else:</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">KeyboardInterrupt
-</pre>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -628,24 +480,16 @@ KeyboardInterrupt
 <span class="n">plot</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.3</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">],</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
 <span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span><span class="o">-</span><span class="mf">0.3</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">],</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
 
-<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;DOS&#39;</span><span class="p">)</span> 
-<span class="n">axes</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;E (eV)&#39;</span><span class="p">)</span> 
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;DOS&#39;</span><span class="p">)</span> 
+<span class="n">title</span><span class="p">(</span><span class="s1">&#39;E (eV)&#39;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">6</span><span class="n">eccd0347dc1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plot</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="o">-</span><span class="n">G</span><span class="o">.</span><span class="n">imag</span><span class="o">/</span><span class="n">pi</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ylim</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plot</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.3</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">],</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span><span class="o">-</span><span class="mf">0.3</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">],</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;plot&#39; is not defined
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;E (eV)&#39;)
 </pre></div>
 </div>
+<img alt="../_images/F_DOS_tBLG_17_1.png" src="../_images/F_DOS_tBLG_17_1.png" />
 </div>
 </div>
 </div>
