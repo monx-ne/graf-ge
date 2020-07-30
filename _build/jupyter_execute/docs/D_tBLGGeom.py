@@ -8,7 +8,7 @@ Consideramos dos capas de grafeno apiladas (A-B) y rotadas entre ellas un ángul
 \cos  \theta = \frac {3m_o^2+3m_or+r^2/2}{3m_o^2+3m_or+r^2}  
 \end{equation}
 
-donde $m_o$ y $r$  son enteros positivos coprimos y $0^{\circ} < \theta < 30^{\circ} $. El efecto de estos parámetros se refleja en los vectores de la supercelda de Moiré en el espacio real y recíproco.
+donde $m_o$ y $r$  son enteros positivos coprimos y $0° < \theta < 30°$. El efecto de estos parámetros se refleja en los vectores de la supercelda de Moiré en el espacio real y recíproco.
 
 La supercelda de Moiré tendrá una periodicidad de mayor área a comparación de la celda unitaria en grafeno.
 

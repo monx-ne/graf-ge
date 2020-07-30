@@ -10,7 +10,7 @@ from pylab import *
 Para la monocapa de grafeno, primero definimos una función que establece una trayectoria en la 1BZ y otra que calculará los eigenvalores del sistema para un determinado número de puntos en el espacio recíproco:
 
 %%time
-n  = 10000
+n  = 1000
 kx = np.linspace(0,1,n)
 ky = np.linspace(0,1,n)
 KX, KY = np.meshgrid(kx,ky)

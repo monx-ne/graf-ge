@@ -32,14 +32,16 @@ Por ser un sistema periódico en el espacio, se debe describir con funciones pro
 
 Al introducirlas al Hamiltoniano, este dependerá de $\textbf{k}$ y adquirirá la forma:
 
-\begin{equation}
+$$
 H_{\textbf{k}} = 
-\begin{pmatrix}
+    \left(
+    \begin{array}{cc}
 0 & -t \alpha(\textbf{k})
 \\
 -t \alpha(\textbf{k})^* & 0
-\end{pmatrix}
-\end{equation}
+\end{array}
+\right)
+$$
 
 donde:
 
